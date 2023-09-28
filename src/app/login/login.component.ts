@@ -48,14 +48,15 @@ export class LoginComponent implements OnInit {
       console.log("Inside login.ts response");
       this.ngxService.stop();
       this.dialogRef.close();
-       console.log("Token form userService  login : ", JSON.stringify(response));
+       //console.log("Token form userService  login : ", JSON.stringify(response));
 
        //console.log(response.headers.get('Authorization'));
      // alert(localStorage.setItem('name', 'Matt West'));
-       var x = localStorage.getItem("mytime");
-      console.log(localStorage.setItem("mytime", "current-Time"));
-      console.log(localStorage.setItem("name", 'Sapana Vinayak More'));//JSON.stringify(model)
+       //var x = localStorage.getItem("mytime");
+      //console.log(localStorage.setItem("mytime", "current-Time"));
+      //console.log(localStorage.setItem("name", 'Sapana Vinayak More'));//JSON.stringify(model)
       console.log((localStorage.setItem('token',response)));
+      console.log("I cam at to route the web to cafe/dashboard");
        this.router.navigate(['/cafe/dashboard']);
     }, (error) => {
       console.log("Inside login.ts Error",error);
