@@ -1,0 +1,39 @@
+<!--
+    <p>sidebar works!</p>>
+-->
+<!--
+<mat-nav-list appAccordion>
+    <mat-list-item appAccordionLink *ngFor ="let menuItem of menuItems.getMenuitem()" routerLinkActive="selected" group="{{menuItem.state}}">
+       <a class ="" appAccordionToggle [routerLink]="['/cafe/',menuItem.state]"
+        *ngIf="menuItem.type === 'link' && (menuItem.role === '' || menuItem.role === userRole)">
+        <mat-icon>{{menuItem.icon}}</mat-icon>
+        <span>{{menuItem.name}}</span>
+       </a>
+    </mat-list-item>
+</mat-nav-list>
+-->
+
+
+
+
+
+<a  [routerLink]="['/cafe/dashboard']">  <mat-icon>dashboard</mat-icon> <span>Dashboard</span> </a> <br> <br>
+<a  [routerLink]="['/cafe/order']">  <mat-icon>shopping_cart</mat-icon> <span>Manage Order</span> </a> <br> <br>
+<a  [routerLink]="['/cafe/bill']">  <mat-icon>backup_table</mat-icon> <span>View  Bill</span> </a> <br> <br> 
+<a *ngIf="userRole === 'admin'" [routerLink]="['/cafe/category']">  <mat-icon>category</mat-icon> <span>Manage Category</span> </a><br>  <br>
+<a  *ngIf="userRole === 'admin'" [routerLink]="['/cafe/product']">  <mat-icon>inventory_2</mat-icon> <span>Manage Product</span> </a><br> <br>
+<a  *ngIf="userRole === 'admin'" [routerLink]="['/cafe/user']">  <mat-icon>people</mat-icon> <span>Manage User</span> </a> 
+       
+       
+
+
+
+
+<!--
+       {state:'dashboard',name:'Dashboard', type:'link', icon:'dashboard', role:''},
+    {state:'order',name:'Manage Order', type:'link', icon:'shopping_cart', role:''},
+    {state:'bill',name:'View  Bill', type:'link', icon:'backup_table', role:''},
+    {state:'category',name:'Manage Category', type:'link', icon:'category', role:'admin'},
+    {state:'product',name:'Manage Product', type:'link', icon:'inventory_2', role:'admin'},
+    {state:'user',name:'Manage User', type:'link', icon:'people', role:'admin'}
+       -->
